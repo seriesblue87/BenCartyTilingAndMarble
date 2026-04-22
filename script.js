@@ -2,23 +2,24 @@ function toggleMenu() {
   document.getElementById("navMenu").classList.toggle("show");
 }
 
-// active nav highlight
+// active nav highlight (FIXED)
 const links = document.querySelectorAll("nav a");
 
-// get current page safely
 let currentPage = window.location.pathname.split("/").pop();
 
 // fix homepage case
-if (currentPage === "" || currentPage === "/") {
+if (!currentPage || currentPage === "/") {
   currentPage = "index.html";
 }
 
 links.forEach(link => {
   const linkPage = link.getAttribute("href");
 
-  // highlight active page
+  // set ONLY one active link
   if (linkPage === currentPage) {
     link.classList.add("active");
+  } else {
+    link.classList.remove("active");
   }
 
   // close mobile menu on click
