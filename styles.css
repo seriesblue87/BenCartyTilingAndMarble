@@ -1,3 +1,4 @@
+/* RESET */
 * {
   margin: 0;
   padding: 0;
@@ -17,10 +18,7 @@ header {
   left: 0;
   width: 100%;
   height: 75px;
-  background: #000000;
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-
+  background: #000;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -54,13 +52,12 @@ nav a:hover {
   color: #fff;
 }
 
+/* ACTIVE TAB */
 nav a.active {
-    background: #ffffff;
-    color: #000000;
-    border: 1px solid #ffffff;
-    font-weight: 500;
-    transform: scale(0.96);
-    transition: 0.1s;
+  background: #ffffff;
+  color: #000;
+  border: 1px solid #ffffff;
+  font-weight: 500;
 }
 
 /* HAMBURGER */
@@ -76,7 +73,7 @@ nav a.active {
   padding-top: 75px;
 }
 
-/* ================= HERO BACKGROUND IMAGE ================= */
+/* ================= HERO ================= */
 .hero {
   height: 100vh;
   display: flex;
@@ -84,13 +81,11 @@ nav a.active {
   align-items: center;
   text-align: center;
 
-  /* 🔥 YOUR IMAGE */
-  background: url("IMG_4898.JPG") center/100% no-repeat;
-
+  background: url("IMG_4898.JPG") center/cover no-repeat;
   position: relative;
 }
 
-/* DARK OVERLAY */
+/* OVERLAY */
 .hero::before {
   content: "";
   position: absolute;
@@ -98,7 +93,6 @@ nav a.active {
   background: rgba(0,0,0,0.45);
 }
 
-/* TEXT ABOVE OVERLAY */
 .hero > div {
   position: relative;
   color: white;
@@ -127,20 +121,20 @@ nav a.active {
 }
 
 .btn.primary {
-  background: #ffffff;
-  color: #1f1f1f;
+  background: #fff;
+  color: #000;
 }
 
 /* FOOTER */
 footer {
-    text-align: center;
-    padding: 30px;
-    font-size: 13px;
-    color: #ffffff;
-    background: #000000;
+  text-align: center;
+  padding: 30px;
+  font-size: 13px;
+  color: #fff;
+  background: #000;
 }
 
-/* FLOAT CALL */
+/* FLOAT BUTTON */
 .floating-call {
   position: fixed;
   bottom: 20px;
@@ -165,17 +159,24 @@ footer {
     top: 75px;
     left: 0;
     width: 100%;
-    background: rgba(0,0,0,0.85);
+    background: rgba(0,0,0,0.95);
     text-align: center;
+
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: 0.2s ease;
   }
 
   nav.show {
     display: flex;
+    opacity: 1;
+    transform: translateY(0);
   }
 
   nav a {
     padding: 18px;
     font-size: 16px;
+    width: 100%;
   }
 
   .hero h2 {
