@@ -200,3 +200,13 @@ footer {
     display: flex;
   }
 }
+
+/* booking page clean fit */
+.page {
+  min-height: 100vh;
+}
+
+/* prevents awkward overflow */
+iframe {
+  display: block;
+}
