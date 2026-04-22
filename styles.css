@@ -29,32 +29,44 @@ header h1 {
   color: #fff;
   font-size: 18px;
   font-weight: 500;
-  letter-spacing: 1px;
 }
 
-/* NAV BUTTONS (BIG PREMIUM STYLE) */
+/* NAV */
 nav {
   display: flex;
-  gap: 12px;
+  gap: 10px;
 }
 
+/* 🔥 FIX: stable button sizing (no shifting EVER) */
 nav a {
   color: #d0d0d0;
   text-decoration: none;
   font-size: 15px;
-  padding: 14px 20px;   /* 👈 BIGGER BUTTONS */
+  padding: 14px 20px;
   border-radius: 6px;
   letter-spacing: 1px;
-  transition: 0.3s;
+
+  /* IMPORTANT: prevents layout shift */
+  border: 1px solid transparent;
+  box-sizing: border-box;
+
+  transition: 0.2s;
 }
 
+/* hover */
 nav a:hover {
   background: #2b2b2b;
   color: #fff;
-  transform: translateY(-1px);
 }
 
-/* HAMBURGER */
+/* active state (NO SIZE CHANGE) */
+nav a.active {
+  background: #ffffff;
+  color: #1f1f1f;
+  border: 1px solid #ffffff;
+}
+
+/* ================= HAMBURGER ================= */
 .hamburger {
   display: none;
   font-size: 28px;
@@ -80,7 +92,6 @@ nav a:hover {
 
 .hero h2 {
   font-size: 40px;
-  font-weight: 500;
   margin-bottom: 10px;
 }
 
@@ -91,12 +102,10 @@ nav a:hover {
 
 /* BUTTONS */
 .btn {
-  display: inline-block;
   padding: 10px 18px;
   margin: 6px;
-  font-size: 13px;
   text-decoration: none;
-  border-radius: 4px;
+  border-radius: 5px;
 }
 
 .btn.primary {
@@ -109,7 +118,7 @@ nav a:hover {
   color: #1f1f1f;
 }
 
-/* ================= SECTIONS ================= */
+/* SECTIONS */
 section {
   padding: 80px 20px;
   text-align: center;
@@ -117,7 +126,7 @@ section {
   margin: auto;
 }
 
-/* ================= GALLERY ================= */
+/* GALLERY */
 .gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -130,7 +139,7 @@ section {
   border-radius: 6px;
 }
 
-/* ================= FORM ================= */
+/* FORM */
 form {
   display: flex;
   flex-direction: column;
@@ -144,7 +153,7 @@ input, textarea {
   margin: 8px 0;
 }
 
-/* ================= FOOTER ================= */
+/* FOOTER */
 footer {
   text-align: center;
   padding: 30px;
@@ -152,7 +161,7 @@ footer {
   color: #777;
 }
 
-/* ================= FLOATING CALL ================= */
+/* FLOATING CALL */
 .floating-call {
   position: fixed;
   bottom: 20px;
@@ -161,7 +170,6 @@ footer {
   color: white;
   padding: 14px;
   border-radius: 50%;
-  font-size: 16px;
 }
 
 /* ================= MOBILE ================= */
@@ -183,16 +191,12 @@ footer {
   }
 
   nav a {
+    padding: 18px;
     font-size: 16px;
-    padding: 18px; /* 👈 BIG MOBILE BUTTONS */
     border-bottom: 1px solid rgba(255,255,255,0.05);
   }
 
   nav.show {
     display: flex;
-  }
-
-  .hero h2 {
-    font-size: 28px;
   }
 }
