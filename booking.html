@@ -2,34 +2,46 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Book</title>
+<title>Book Consultation</title>
 <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
 <header>
-  <h1>Ben Carty Tiling & Marble</h1>
+  <h1>Ben Carty</h1>
+
   <div class="hamburger" onclick="toggleMenu()">☰</div>
 
   <nav id="navMenu">
     <a href="index.html">Home</a>
     <a href="gallery.html">My Work</a>
     <a href="booking.html">Book</a>
-    <a href="contact.html">Client Feedback</a>
+    <a href="contact.html">Contact</a>
   </nav>
 </header>
 
 <div class="page">
 
-<section>
-  <h2>Book a Consultation</h2>
-</section>
+  <!-- TITLE SECTION -->
+  <section style="padding-bottom: 30px;">
+    <h2>Book a Consultation</h2>
+    <p>Select a time below and I’ll confirm your appointment.</p>
+  </section>
 
-<section>
-  <iframe src="https://calendly.com/brandon-renschler/30min"
-  width="100%" height="700"></iframe>
-</section>
+  <!-- CALENDAR WRAPPER (FIXED HEIGHT - NO PAGE SCROLL ISSUE) -->
+  <section style="max-width: 1100px; margin: auto; height: 750px;">
+    <iframe
+      src="https://calendly.com/brandon-renschler/30min"
+      style="
+        width: 100%;
+        height: 100%;
+        border: none;
+        border-radius: 8px;
+        overflow: hidden;
+      ">
+    </iframe>
+  </section>
 
 </div>
 
