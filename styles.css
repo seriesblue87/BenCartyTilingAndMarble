@@ -178,3 +178,20 @@ footer {
     font-size: 28px;
   }
 }
+/* Remove click/focus highlight on nav buttons */
+nav a {
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Remove focus ring (keyboard + click) */
+nav a:focus,
+nav a:active {
+  outline: none;
+  box-shadow: none;
+}
+
+/* Optional: remove text selection highlight */
+nav a {
+  user-select: none;
+}
