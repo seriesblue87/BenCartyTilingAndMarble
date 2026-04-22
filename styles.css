@@ -130,10 +130,11 @@ nav a.active {
 
 /* FOOTER */
 footer {
-  text-align: center;
-  padding: 30px;
-  font-size: 13px;
-  color: #777;
+    text-align: center;
+    padding: 30px;
+    font-size: 13px;
+    color: #ffffff;
+    background: #000000;
 }
 
 /* FLOAT CALL */
