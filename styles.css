@@ -148,6 +148,10 @@ footer {
 /* ================= MOBILE ================= */
 @media (max-width: 768px) {
 
+  header {
+    justify-content: space-between;
+  }
+
   .hamburger {
     display: block;
   }
@@ -161,16 +165,10 @@ footer {
     width: 100%;
     background: rgba(0,0,0,0.95);
     text-align: center;
-
-    opacity: 0;
-    transform: translateY(-10px);
-    transition: 0.2s ease;
   }
 
   nav.show {
     display: flex;
-    opacity: 1;
-    transform: translateY(0);
   }
 
   nav a {
