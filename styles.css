@@ -82,7 +82,8 @@ nav a.active {
   text-align: center;
 
   /* 🔥 YOUR IMAGE */
-  background: url("IMG_4900.JPG") center/cover no-repeat;
+  background: url("images/IMG_4900.JPG") center/contain no-repeat;
+  background-color: #000;
 
   position: relative;
 }
