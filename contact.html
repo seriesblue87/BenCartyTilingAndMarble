@@ -9,8 +9,10 @@
 <body>
 
 <header>
-  <h1>Ben Carty Tiling & Marble</h1>
-  <nav>
+  <h1>Ben Carty</h1>
+  <div class="hamburger" onclick="toggleMenu()">☰</div>
+
+  <nav id="navMenu">
     <a href="index.html">Home</a>
     <a href="gallery.html">My Work</a>
     <a href="booking.html">Book</a>
@@ -20,25 +22,27 @@
 
 <div class="page">
 
-  <section>
-    <h2>Contact Me</h2>
-    <p>Call or text: (484) 363-9794</p>
-  </section>
+<section>
+  <h2>Contact Me</h2>
+  <p>(484) 363-9794</p>
+</section>
 
-  <section>
-    <form action="https://formspree.io/f/YOUR-ID" method="POST">
-      <input type="text" name="name" placeholder="Name" required>
-      <input type="email" name="email" placeholder="Email" required>
-      <textarea name="message" placeholder="Project details"></textarea>
-      <button type="submit">Send</button>
-    </form>
-  </section>
+<section>
+  <form action="https://formspree.io/f/YOUR-ID" method="POST">
+    <input type="text" name="name" placeholder="Name">
+    <input type="email" name="email" placeholder="Email">
+    <textarea name="message" placeholder="Project details"></textarea>
+    <button type="submit">Send</button>
+  </form>
+</section>
 
 </div>
 
 <footer>
   <p>© 2026 Ben Carty Tiling & Marble</p>
 </footer>
+
+<script src="script.js"></script>
 
 </body>
 </html>
