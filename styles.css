@@ -1,54 +1,82 @@
-body {
+/* RESET */
+* {
   margin: 0;
-  font-family: 'Inter', sans-serif;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* BODY */
+body {
+  font-family: Arial, Helvetica, sans-serif;
   background: #0a0a0a;
   color: #fff;
+  line-height: 1.6;
 }
 
 /* HEADER */
 header {
   display: flex;
   justify-content: space-between;
-  padding: 20px 50px;
+  align-items: center;
+  padding: 15px 30px;
   position: fixed;
   width: 100%;
-  background: rgba(0,0,0,0.6);
-  backdrop-filter: blur(10px);
-  z-index: 10;
+  top: 0;
+  left: 0;
+  background: rgba(0,0,0,0.85);
+  z-index: 1000;
+}
+
+header h1 {
+  font-size: 20px;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 nav a {
-  margin: 0 15px;
+  margin-left: 15px;
   color: #d4af37;
   text-decoration: none;
+  font-size: 14px;
 }
 
 /* HERO */
 .hero {
   height: 100vh;
+  width: 100%;
   background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.9)),
               url('images/hero.jpg') center/cover no-repeat;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   text-align: center;
+  padding: 20px;
+}
+
+.overlay {
+  max-width: 600px;
 }
 
 .overlay h2 {
-  font-size: 3rem;
-  font-family: 'Playfair Display', serif;
+  font-size: 32px;
+  margin-bottom: 15px;
 }
 
 .overlay p {
   color: #ccc;
+  margin-bottom: 20px;
 }
 
 /* BUTTONS */
 .btn {
-  padding: 12px 28px;
-  margin: 10px;
-  text-decoration: none;
+  padding: 10px 20px;
+  margin: 5px;
   display: inline-block;
+  text-decoration: none;
+  font-size: 14px;
 }
 
 .btn.gold {
@@ -64,42 +92,40 @@ nav a {
 .btn.main {
   background: white;
   color: black;
+  margin-top: 10px;
 }
 
 /* SECTIONS */
-.intro, .about, .trust {
+section {
   padding: 80px 20px;
   text-align: center;
-  max-width: 800px;
+  max-width: 900px;
   margin: auto;
 }
 
-.trust p {
-  margin: 10px 0;
-}
-
-/* GALLERY */
+/* GALLERY GRID */
 .gallery {
-  padding: 100px 50px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
+  padding: 80px 20px;
+  gap: 15px;
 }
 
 .gallery img {
   width: 100%;
-  border-radius: 10px;
+  border-radius: 8px;
 }
 
 /* SLIDER */
 .slider {
   position: relative;
   max-width: 800px;
-  margin: auto;
+  margin: 40px auto;
 }
 
 .slider img {
   width: 100%;
+  display: block;
 }
 
 .after {
@@ -110,22 +136,39 @@ nav a {
   overflow: hidden;
 }
 
-/* CONTACT */
-.contact {
-  padding: 100px 20px;
-  text-align: center;
+/* CONTACT FORM */
+.contact form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 input, textarea {
-  width: 80%;
+  width: 90%;
+  max-width: 500px;
   padding: 10px;
-  margin: 10px;
+  margin: 8px 0;
 }
 
 button {
   padding: 10px 20px;
   background: #d4af37;
   border: none;
+  cursor: pointer;
+}
+
+/* BOOKING TEXT */
+.booking-text {
+  margin-top: 100px;
+  padding: 20px;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 30px 10px;
+  color: #aaa;
+  font-size: 14px;
 }
 
 /* FLOATING CALL BUTTON */
@@ -135,13 +178,23 @@ button {
   right: 20px;
   background: #d4af37;
   color: black;
-  padding: 15px;
+  padding: 12px;
   border-radius: 50%;
-  font-size: 20px;
+  font-size: 18px;
 }
 
-/* BOOKING TEXT */
-.booking-text {
-  padding-top: 120px;
-  text-align: center;
+/* MOBILE FIXES */
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav {
+    margin-top: 10px;
+  }
+
+  .overlay h2 {
+    font-size: 24px;
+  }
 }
