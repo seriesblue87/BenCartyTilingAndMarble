@@ -82,7 +82,8 @@ nav a.active {
   text-align: center;
 
   background: url("IMG_4898.JPG") center center no-repeat;
-  background-size: 90%;
+  background-size: 70%;
+  background: #000000;
   position: relative;
 }
 
