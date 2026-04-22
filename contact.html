@@ -1,21 +1,25 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Contact</title>
-  <link rel="stylesheet" href="styles.css">
+<meta charset="UTF-8">
+<title>Contact Me</title>
+<link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
 
 <header>
-  <h1>Contact</h1>
+  <h1>Contact Me</h1>
 </header>
 
-<section style="padding:100px;">
+<section class="contact">
+  <p>Call or text me directly at (484) 363-9794, or send a message below.</p>
+
   <form action="https://formspree.io/f/YOUR-ID" method="POST">
-    <input type="text" name="name" placeholder="Name" required><br><br>
-    <input type="email" name="email" placeholder="Email" required><br><br>
-    <textarea name="message" placeholder="Message"></textarea><br><br>
-    <button type="submit">Send</button>
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <textarea name="message" placeholder="Tell me about your project"></textarea>
+    <button type="submit">Send Message</button>
   </form>
 </section>
 
