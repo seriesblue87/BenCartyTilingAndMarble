@@ -82,7 +82,7 @@ nav a.active {
   text-align: center;
 
   /* 🔥 YOUR IMAGE */
-  background: url("images/IMG_4900.JPG") center/cover no-repeat;
+  background: url("IMG_4900.JPG") center/cover no-repeat;
 
   position: relative;
 }
