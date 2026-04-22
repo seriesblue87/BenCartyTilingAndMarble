@@ -1,9 +1,8 @@
-// hamburger toggle
 function toggleMenu() {
   document.getElementById("navMenu").classList.toggle("show");
 }
 
-// highlight active page WITHOUT shifting
+// active nav highlight
 const links = document.querySelectorAll("nav a");
 
 links.forEach(link => {
