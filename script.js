@@ -3,27 +3,31 @@ function toggleMenu() {
 }
 
 // active nav highlight (FIXED)
-const links = document.querySelectorAll("nav a");
+document.addEventListener("DOMContentLoaded", () => {
 
-let currentPage = window.location.pathname.split("/").pop();
+  const links = document.querySelectorAll("nav a");
 
-// fix homepage case
-if (!currentPage || currentPage === "/") {
-  currentPage = "index.html";
-}
+  let currentPage = window.location.pathname.split("/").pop();
 
-links.forEach(link => {
-  const linkPage = link.getAttribute("href");
-
-  // set ONLY one active link
-  if (linkPage === currentPage) {
-    link.classList.add("active");
-  } else {
-    link.classList.remove("active");
+  // FIX: handle homepage correctly
+  if (currentPage === "" || currentPage === "/" || !currentPage) {
+    currentPage = "index.html";
   }
 
-  // close mobile menu on click
-  link.addEventListener("click", () => {
-    document.getElementById("navMenu").classList.remove("show");
+  links.forEach(link => {
+    const linkPage = link.getAttribute("href");
+
+    // set ONLY one active link
+    if (linkPage === currentPage) {
+      link.classList.add("active");
+    } else {
+      link.classList.remove("active");
+    }
+
+    // close mobile menu on click
+    link.addEventListener("click", () => {
+      document.getElementById("navMenu").classList.remove("show");
+    });
   });
+
 });
