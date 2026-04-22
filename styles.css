@@ -55,9 +55,12 @@ nav a:hover {
 }
 
 nav a.active {
-  background: #ffffff;
-  color: #1f1f1f;
-  border: 1px solid #ffffff;
+    background: #ffffff;
+    color: #000000;
+    border: 1px solid #ffffff;
+    font-weight: 500;
+    transform: scale(0.96);
+    transition: 0.1s;
 }
 
 /* HAMBURGER */
