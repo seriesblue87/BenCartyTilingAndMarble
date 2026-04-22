@@ -181,3 +181,11 @@ footer {
     font-size: 28px;
   }
 }
+
+.hamburger {
+  display: none;
+  font-size: 28px;
+  color: white;
+  cursor: pointer;
+  z-index: 1100;
+}
