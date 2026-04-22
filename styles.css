@@ -9,31 +9,25 @@ body {
 header {
   display: flex;
   justify-content: space-between;
-  padding: 25px 60px;
+  padding: 20px 50px;
   position: fixed;
   width: 100%;
-  z-index: 10;
   background: rgba(0,0,0,0.6);
   backdrop-filter: blur(10px);
-}
-
-header h1 {
-  font-family: 'Playfair Display', serif;
-  letter-spacing: 2px;
+  z-index: 10;
 }
 
 nav a {
   margin: 0 15px;
   color: #d4af37;
   text-decoration: none;
-  font-weight: 300;
 }
 
 /* HERO */
 .hero {
   height: 100vh;
   background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.9)),
-              url('images/luxury-tile.jpg') center/cover no-repeat;
+              url('images/hero.jpg') center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -46,7 +40,6 @@ nav a {
 }
 
 .overlay p {
-  margin: 20px 0;
   color: #ccc;
 }
 
@@ -54,14 +47,13 @@ nav a {
 .btn {
   padding: 12px 28px;
   margin: 10px;
-  display: inline-block;
   text-decoration: none;
-  transition: 0.3s;
+  display: inline-block;
 }
 
 .btn.gold {
   background: #d4af37;
-  color: #000;
+  color: black;
 }
 
 .btn.outline {
@@ -70,34 +62,86 @@ nav a {
 }
 
 .btn.main {
-  display: block;
-  margin-top: 20px;
-  background: #fff;
-  color: #000;
+  background: white;
+  color: black;
 }
 
-.btn:hover {
-  transform: scale(1.05);
-}
-
-/* INTRO */
-.intro {
-  padding: 100px 20px;
+/* SECTIONS */
+.intro, .about, .trust {
+  padding: 80px 20px;
   text-align: center;
   max-width: 800px;
   margin: auto;
 }
 
-/* GALLERY */
-.gallery {
-  padding: 120px 50px;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 30px;
+.trust p {
+  margin: 10px 0;
 }
 
-footer {
+/* GALLERY */
+.gallery {
+  padding: 100px 50px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.gallery img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* SLIDER */
+.slider {
+  position: relative;
+  max-width: 800px;
+  margin: auto;
+}
+
+.slider img {
+  width: 100%;
+}
+
+.after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  overflow: hidden;
+}
+
+/* CONTACT */
+.contact {
+  padding: 100px 20px;
   text-align: center;
-  padding: 40px;
-  color: #aaa;
+}
+
+input, textarea {
+  width: 80%;
+  padding: 10px;
+  margin: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  background: #d4af37;
+  border: none;
+}
+
+/* FLOATING CALL BUTTON */
+.floating-call {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #d4af37;
+  color: black;
+  padding: 15px;
+  border-radius: 50%;
+  font-size: 20px;
+}
+
+/* BOOKING TEXT */
+.booking-text {
+  padding-top: 120px;
+  text-align: center;
 }
