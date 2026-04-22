@@ -8,12 +8,11 @@
 /* BODY */
 body {
   font-family: Arial, Helvetica, sans-serif;
-  background: #0a0a0a;
-  color: #fff;
-  line-height: 1.6;
+  background: #ffffff;
+  color: #222;
 }
 
-/* HEADER */
+/* HEADER (CONSISTENT ON ALL PAGES) */
 header {
   display: flex;
   justify-content: space-between;
@@ -23,37 +22,38 @@ header {
   width: 100%;
   top: 0;
   left: 0;
-  background: rgba(0,0,0,0.85);
+  background: #ffffff;
+  border-bottom: 1px solid #ddd;
   z-index: 1000;
 }
 
 header h1 {
   font-size: 20px;
-}
-
-nav {
-  display: flex;
-  flex-wrap: wrap;
+  color: #4da6ff;
 }
 
 nav a {
   margin-left: 15px;
-  color: #d4af37;
   text-decoration: none;
+  color: #333;
   font-size: 14px;
+}
+
+nav a:hover {
+  color: #4da6ff;
 }
 
 /* HERO */
 .hero {
   height: 100vh;
-  width: 100%;
-  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.9)),
+  background: linear-gradient(rgba(255,255,255,0.6), rgba(255,255,255,0.9)),
               url('images/hero.jpg') center/cover no-repeat;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
   padding: 20px;
+  margin-top: 60px;
 }
 
 .overlay {
@@ -62,11 +62,10 @@ nav a {
 
 .overlay h2 {
   font-size: 32px;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
 .overlay p {
-  color: #ccc;
   margin-bottom: 20px;
 }
 
@@ -77,22 +76,22 @@ nav a {
   display: inline-block;
   text-decoration: none;
   font-size: 14px;
+  border-radius: 5px;
 }
 
-.btn.gold {
-  background: #d4af37;
-  color: black;
+.btn.primary {
+  background: #4da6ff;
+  color: white;
 }
 
 .btn.outline {
-  border: 1px solid #d4af37;
-  color: #d4af37;
+  border: 1px solid #4da6ff;
+  color: #4da6ff;
 }
 
-.btn.main {
-  background: white;
-  color: black;
-  margin-top: 10px;
+.btn.secondary {
+  background: #222;
+  color: white;
 }
 
 /* SECTIONS */
@@ -103,12 +102,12 @@ section {
   margin: auto;
 }
 
-/* GALLERY GRID */
+/* GALLERY */
 .gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  padding: 80px 20px;
   gap: 15px;
+  padding: 100px 20px;
 }
 
 .gallery img {
@@ -125,7 +124,6 @@ section {
 
 .slider img {
   width: 100%;
-  display: block;
 }
 
 .after {
@@ -136,7 +134,7 @@ section {
   overflow: hidden;
 }
 
-/* CONTACT FORM */
+/* CONTACT */
 .contact form {
   display: flex;
   flex-direction: column;
@@ -152,49 +150,38 @@ input, textarea {
 
 button {
   padding: 10px 20px;
-  background: #d4af37;
+  background: #4da6ff;
+  color: white;
   border: none;
-  cursor: pointer;
 }
 
-/* BOOKING TEXT */
+/* BOOKING */
 .booking-text {
   margin-top: 100px;
-  padding: 20px;
 }
 
 /* FOOTER */
 footer {
   text-align: center;
-  padding: 30px 10px;
-  color: #aaa;
-  font-size: 14px;
+  padding: 30px;
+  color: #555;
 }
 
-/* FLOATING CALL BUTTON */
+/* FLOATING CALL */
 .floating-call {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background: #d4af37;
-  color: black;
+  background: #4da6ff;
+  color: white;
   padding: 12px;
   border-radius: 50%;
-  font-size: 18px;
 }
 
-/* MOBILE FIXES */
+/* MOBILE */
 @media (max-width: 600px) {
   header {
     flex-direction: column;
     align-items: flex-start;
-  }
-
-  nav {
-    margin-top: 10px;
-  }
-
-  .overlay h2 {
-    font-size: 24px;
   }
 }
