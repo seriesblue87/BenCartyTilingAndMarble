@@ -2,24 +2,18 @@ function toggleMenu() {
   document.getElementById("navMenu").classList.toggle("show");
 }
 
-// EVERYTHING BELOW goes inside DOMContentLoaded
 document.addEventListener("DOMContentLoaded", () => {
 
   const links = document.querySelectorAll("nav a");
-
   let currentPage = window.location.pathname.split("/").pop();
 
-  if (currentPage === "" || currentPage === "/" || !currentPage) {
+  if (!currentPage) {
     currentPage = "index.html";
   }
 
   links.forEach(link => {
-    const linkPage = link.getAttribute("href");
-
-    if (linkPage === currentPage) {
+    if (link.getAttribute("href") === currentPage) {
       link.classList.add("active");
-    } else {
-      link.classList.remove("active");
     }
 
     link.addEventListener("click", () => {
