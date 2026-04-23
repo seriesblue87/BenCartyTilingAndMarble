@@ -217,3 +217,8 @@ footer {
   color: white;
   font-size: 14px;
 }
+.card {
+  max-width: 800px;
+  margin: 40px auto;
+  text-align: center;
+}
