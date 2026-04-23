@@ -19,16 +19,4 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // SCROLL REVEAL
-  const items = document.querySelectorAll("section, .card, .review, .gallery img");
-
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("show");
-      }
-    });
-  }, { threshold: 0.15 });
-
-  items.forEach(el => observer.observe(el));
 });
