@@ -1,18 +1,24 @@
-/* RESET */
+/* =========================
+   RESET
+   ========================= */
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* BASE (HOME SAFE) */
+/* =========================
+   BASE (HOME PAGE ONLY STYLE)
+   ========================= */
+
 body {
   font-family: Arial, Helvetica, sans-serif;
   background: #f5f6f8;
   color: #1a1a1a;
 }
 
-/* NAV */
+/* NAVBAR */
 header {
   position: fixed;
   top: 0;
@@ -31,7 +37,7 @@ header h1 {
   font-size: 16px;
 }
 
-/* NAV LINKS */
+/* NAV LINKS (DESKTOP DEFAULT) */
 nav {
   display: flex;
   gap: 10px;
@@ -41,14 +47,20 @@ nav a {
   color: #ccc;
   text-decoration: none;
   padding: 10px 14px;
+  border-radius: 6px;
+}
+
+nav a:hover {
+  background: #2b2b2b;
+  color: #fff;
 }
 
 nav a.active {
-  background: white;
-  color: black;
+  background: #fff;
+  color: #000;
 }
 
-/* HAMBURGER */
+/* HAMBURGER (HIDDEN ON DESKTOP) */
 .hamburger {
   display: none;
   font-size: 28px;
@@ -56,12 +68,12 @@ nav a.active {
   cursor: pointer;
 }
 
-/* PAGE */
+/* PAGE OFFSET */
 .page {
   padding-top: 70px;
 }
 
-/* HERO (HOME ONLY SAFE) */
+/* HERO (HOME ONLY) */
 .hero {
   min-height: calc(100vh - 70px);
   display: flex;
@@ -84,11 +96,12 @@ nav a.active {
   color: white;
 }
 
-/* BUTTON */
+/* BUTTON (FIXED HOME BUTTON) */
 .btn {
   padding: 12px 22px;
   border-radius: 6px;
   text-decoration: none;
+  display: inline-block;
 }
 
 .btn.primary {
@@ -96,77 +109,45 @@ nav a.active {
   color: #000;
 }
 
-/* PAGE TITLE */
-.page-title {
-  text-align: center;
-  padding: 30px 0 10px;
-}
+/* =========================
+   GALLERY (BASE)
+   ========================= */
 
-.page-title h2 {
-  color: white;
-}
-
-/* BEFORE / AFTER */
-.before-after {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 25px;
-  max-width: 900px;
+.gallery {
+  column-count: 3;
+  max-width: 1100px;
   margin: auto;
 }
 
-.work-item img {
+.gallery img {
   width: 100%;
-  border-radius: 12px;
+  margin-bottom: 10px;
+  border-radius: 10px;
 }
 
-.label {
-  margin-top: 10px;
-  display: inline-block;
-  padding: 6px 14px;
-  border-radius: 20px;
-  font-size: 13px;
-}
+/* =========================
+   TESTIMONIALS (BASE)
+   ========================= */
 
-.label.before {
-  background: rgba(255,255,255,0.08);
-  color: #ccc;
-}
-
-.label.after {
-  background: rgba(255,255,255,0.15);
-  color: white;
-}
-
-/* REVIEWS */
 .reviews {
-  max-width: 900px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+  gap: 15px;
+  max-width: 1100px;
   margin: auto;
-  padding: 20px;
 }
 
 .review {
-  background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(255,255,255,0.08);
+  background: #1a1a1a;
+  color: white;
   padding: 20px;
-  border-radius: 12px;
-  color: #eee;
-  margin-bottom: 15px;
+  border-radius: 10px;
 }
 
-/* BOOKING */
-.booking-full {
-  width: 100%;
-  height: calc(100vh - 70px);
-}
+/* =========================
+   FOOTER
+   ========================= */
 
-.booking-full iframe {
-  width: 100%;
-  height: 100%;
-  border: none;
-}
-
-/* FOOTER */
 footer {
   text-align: center;
   padding: 30px;
@@ -174,7 +155,10 @@ footer {
   color: white;
 }
 
-/* MOBILE */
+/* =========================
+   MOBILE NAV (FIXED)
+   ========================= */
+
 @media (max-width: 768px) {
 
   .hamburger {
@@ -186,15 +170,53 @@ footer {
     flex-direction: column;
     position: absolute;
     top: 70px;
+    left: 0;
     width: 100%;
-    background: black;
+    background: rgba(0,0,0,0.95);
   }
 
   nav.show {
     display: flex;
   }
 
-  .before-after {
-    grid-template-columns: 1fr;
+  nav a {
+    padding: 18px;
+    text-align: center;
   }
+}
+
+/* =========================
+   DARK MODE (ONLY NON-HOME)
+   ========================= */
+
+body.dark-page {
+  background: radial-gradient(circle at top, #141420, #07070b) !important;
+  color: #eaeaea;
+}
+
+/* glass cards */
+body.dark-page .card,
+body.dark-page section {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 12px;
+  padding: 25px;
+  margin: 20px auto;
+  backdrop-filter: blur(10px);
+}
+
+/* text */
+body.dark-page p {
+  color: rgba(255,255,255,0.75);
+}
+
+/* glow background */
+body.dark-page::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(circle at 20% 10%, rgba(255,255,255,0.05), transparent 40%),
+    radial-gradient(circle at 80% 30%, rgba(120,120,255,0.05), transparent 45%);
+  pointer-events: none;
 }
