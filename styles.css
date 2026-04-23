@@ -228,3 +228,48 @@ footer {
   margin: 40px auto;
   text-align: center;
 }
+/* ABOUT PAGE */
+.about-hero {
+  max-width: 900px;
+  margin: 40px auto;
+  text-align: center;
+}
+
+.about-hero p {
+  margin-top: 15px;
+  line-height: 1.6;
+  color: rgba(255,255,255,0.8);
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 1100px;
+  margin: 20px auto;
+}
+
+.about-box {
+  background: rgba(255,255,255,0.05);
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.08);
+  text-align: center;
+}
+
+.about-box h3 {
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.about-box p {
+  color: rgba(255,255,255,0.7);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.about-cta {
+  text-align: center;
+  max-width: 800px;
+  margin: 40px auto;
+}
