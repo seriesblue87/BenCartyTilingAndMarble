@@ -209,3 +209,11 @@ body.dark-page {
     grid-template-columns: 1fr;
   }
 }
+
+footer {
+  text-align: center;
+  padding: 25px;
+  background: #000;
+  color: white;
+  font-size: 14px;
+}
