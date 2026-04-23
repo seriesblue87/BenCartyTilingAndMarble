@@ -113,20 +113,7 @@ nav a.active {
   color: #000;
 }
 
-/* GALLERY SECTION (DARK THEME) */
-.gallery-section {
-  background: #0f0f0f;
-  padding: 60px 20px;
-  text-align: center;
-}
-
-.gallery-section h2 {
-  color: #fff;
-  margin-bottom: 40px;
-  font-size: 28px;
-}
-
-/* GRID LAYOUT */
+/* GALLERY */
 .gallery {
   column-count: 3;
   column-gap: 15px;
@@ -134,33 +121,35 @@ nav a.active {
   margin: auto;
 }
 
-/* IMAGES */
 .gallery img {
   width: 100%;
   margin-bottom: 15px;
   border-radius: 12px;
-  display: block;
-
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  transition: 0.4s;
 }
 
-/* HOVER EFFECT */
 .gallery img:hover {
   transform: scale(1.04);
-  box-shadow: 0 15px 35px rgba(0,0,0,0.6);
 }
 
-/* RESPONSIVE */
-@media (max-width: 900px) {
-  .gallery {
-    column-count: 2;
-  }
+/* TESTIMONIALS */
+.reviews {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
 }
 
-@media (max-width: 500px) {
-  .gallery {
-    column-count: 1;
-  }
+/* CARDS */
+.review {
+  background: #1a1a1a;
+  padding: 25px;
+  border-radius: 10px;
+  color: #e5e5e5;
+  transition: 0.3s;
+}
+
+.review:hover {
+  transform: translateY(-5px);
 }
 
 /* FOOTER */
@@ -184,7 +173,6 @@ footer {
     flex-direction: column;
     position: absolute;
     top: 70px;
-    left: 0;
     width: 100%;
     background: rgba(0,0,0,0.95);
   }
@@ -192,104 +180,38 @@ footer {
   nav.show {
     display: flex;
   }
-
-  nav a {
-    padding: 18px;
-    text-align: center;
-  }
-
-  .hero {
-    min-height: calc(100svh - 70px);
-    padding: 10px 15px;
-  }
-
-  .hero > div {
-    transform: translateY(-25px);
-  }
-
-  .hero h2 {
-    font-size: 24px;
-    line-height: 1.3;
-  }
-
-  .hero p {
-    font-size: 14px;
-  }
 }
 
-/* TESTIMONIALS SECTION */
-.testimonials {
-  background: #0f0f0f;
-  color: white;
-  padding: 60px 20px;
-  text-align: center;
+/* =========================
+   DARK MODE (NON-HOME PAGES)
+   ========================= */
+
+body.dark-page {
+  background: radial-gradient(circle at top, #12121a, #07070b);
+  color: #eaeaea;
 }
 
-.testimonials h2 {
-  margin-bottom: 40px;
-  font-size: 28px;
+/* glass sections */
+body.dark-page .section-card,
+body.dark-page section {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 14px;
+  padding: 30px;
+  margin: 20px auto;
+  backdrop-filter: blur(10px);
 }
 
-/* GRID */
-.reviews {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  max-width: 1100px;
-  margin: auto;
+/* text */
+body.dark-page p {
+  color: #cfcfcf;
 }
 
-/* CARD */
-.review {
-  background: #1a1a1a;
-  padding: 25px;
-  border-radius: 10px;
-  text-align: left;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+body.dark-page h2 {
+  color: #fff;
 }
 
-.review p {
-  font-size: 15px;
-  line-height: 1.6;
-  margin-bottom: 15px;
-  color: #e5e5e5;
-}
-
-.review h4 {
-  font-size: 14px;
-  color: #bbb;
-}
-
-/* HOVER EFFECT */
-.review:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
-}
-/* BOOKING SECTION */
-.booking-section {
-  background: #0f0f0f;
-  color: white;
-  padding: 60px 20px;
-  text-align: center;
-  min-height: calc(100svh - 70px);
-}
-
-/* HEADER */
-.booking-header {
-  margin-bottom: 30px;
-}
-
-.booking-header h2 {
-  font-size: 28px;
-  margin-bottom: 10px;
-}
-
-.booking-header p {
-  color: #bbb;
-  font-size: 15px;
-}
-
-/* CALENDLY CONTAINER */
+/* booking */
 .booking-container {
   max-width: 1000px;
   height: 700px;
@@ -299,7 +221,6 @@ footer {
   box-shadow: 0 15px 40px rgba(0,0,0,0.6);
 }
 
-/* IFRAME */
 .booking-container iframe {
   width: 100%;
   height: 100%;
