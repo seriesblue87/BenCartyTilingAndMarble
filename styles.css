@@ -304,3 +304,69 @@ body.dark-page {
   max-width: 800px;
   margin: 60px auto;
 }
+
+
+
+
+
+@media (max-width: 768px) {
+
+  /* GENERAL SPACING */
+  .page {
+    padding-top: 80px;
+  }
+
+  .card {
+    margin: 20px 15px;
+    padding: 20px;
+  }
+
+  /* PROFILE / HERO TEXT */
+  .about-hero {
+    margin: 25px 15px;
+  }
+
+  .about-hero h2 {
+    font-size: 22px;
+  }
+
+  .about-hero p {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  /* 3 CARDS STACK CLEANLY */
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    padding: 0 15px;
+  }
+
+  .about-box {
+    padding: 18px;
+  }
+
+  .about-box h3 {
+    font-size: 16px;
+  }
+
+  .about-box p {
+    font-size: 13px;
+  }
+
+  /* CTA SECTION */
+  .about-cta {
+    margin: 30px 15px;
+  }
+
+  .about-cta h2 {
+    font-size: 20px;
+    line-height: 1.3;
+  }
+
+  /* PROFILE IMAGE (if you added it) */
+  .profile-pic {
+    width: 110px;
+    height: 110px;
+  }
+}
