@@ -241,3 +241,13 @@ body.dark-page {
     grid-template-columns: 1fr;
   }
 }
+
+.reviews {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 20px;
+  justify-items: center;
+}
