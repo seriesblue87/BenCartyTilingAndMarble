@@ -5,7 +5,7 @@
   box-sizing: border-box;
 }
 
-/* BASE */
+/* BASE (HOME SAFE) */
 body {
   font-family: Arial, Helvetica, sans-serif;
   background: #f5f6f8;
@@ -44,8 +44,8 @@ nav a {
 }
 
 nav a.active {
-  background: #fff;
-  color: #000;
+  background: white;
+  color: black;
 }
 
 /* HAMBURGER */
@@ -61,18 +61,27 @@ nav a.active {
   padding-top: 70px;
 }
 
-/* HERO FIX (YOUR REQUEST) */
-.hero h2 {
-  font-size: 52px;
-  line-height: 1.2;
-  margin-bottom: 18px;
+/* HERO (HOME ONLY SAFE) */
+.hero {
+  min-height: calc(100vh - 70px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: url("IMG_4898.JPG") center/cover no-repeat;
+  position: relative;
 }
 
-.hero p {
-  font-size: 18px;
-  line-height: 1.6;
-  margin-bottom: 28px;
-  color: #e5e5e5;
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+}
+
+.hero > div {
+  position: relative;
+  color: white;
 }
 
 /* BUTTON */
@@ -87,17 +96,23 @@ nav a.active {
   color: #000;
 }
 
-/* BEFORE & AFTER */
+/* PAGE TITLE */
+.page-title {
+  text-align: center;
+  padding: 30px 0 10px;
+}
+
+.page-title h2 {
+  color: white;
+}
+
+/* BEFORE / AFTER */
 .before-after {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
+  gap: 25px;
   max-width: 900px;
   margin: auto;
-}
-
-.work-item {
-  text-align: center;
 }
 
 .work-item img {
@@ -105,17 +120,41 @@ nav a.active {
   border-radius: 12px;
 }
 
-.work-item p {
+.label {
   margin-top: 10px;
+  display: inline-block;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+}
+
+.label.before {
+  background: rgba(255,255,255,0.08);
   color: #ccc;
 }
 
-/* CENTER TITLE */
-.center-title {
-  text-align: center;
+.label.after {
+  background: rgba(255,255,255,0.15);
+  color: white;
 }
 
-/* BOOKING FULL SCREEN */
+/* REVIEWS */
+.reviews {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+}
+
+.review {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  padding: 20px;
+  border-radius: 12px;
+  color: #eee;
+  margin-bottom: 15px;
+}
+
+/* BOOKING */
 .booking-full {
   width: 100%;
   height: calc(100vh - 70px);
@@ -127,22 +166,6 @@ nav a.active {
   border: none;
 }
 
-/* TESTIMONIALS */
-.reviews {
-  display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
-  gap: 15px;
-  max-width: 1100px;
-  margin: auto;
-}
-
-.review {
-  background: #1a1a1a;
-  color: white;
-  padding: 20px;
-  border-radius: 10px;
-}
-
 /* FOOTER */
 footer {
   text-align: center;
@@ -151,7 +174,7 @@ footer {
   color: white;
 }
 
-/* MOBILE MENU FIX */
+/* MOBILE */
 @media (max-width: 768px) {
 
   .hamburger {
@@ -164,16 +187,11 @@ footer {
     position: absolute;
     top: 70px;
     width: 100%;
-    background: rgba(0,0,0,0.95);
+    background: black;
   }
 
   nav.show {
     display: flex;
-  }
-
-  nav a {
-    padding: 18px;
-    text-align: center;
   }
 
   .before-after {
