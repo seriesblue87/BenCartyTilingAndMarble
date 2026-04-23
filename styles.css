@@ -68,14 +68,14 @@ nav a.active {
 
 /* HERO */
 .hero {
-  min-height: calc(100vh - 70px);
+  min-height: calc(100svh - 70px);
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
   background: url("IMG_4898.JPG") center / cover no-repeat;
   position: relative;
-  padding: 40px 20px;
+  padding: 20px;
 }
 
 .hero::before {
@@ -161,8 +161,17 @@ footer {
     text-align: center;
   }
 
+  .hero {
+    min-height: calc(100svh - 70px);
+    padding: 10px 15px;
+  }
+
+  .hero > div {
+    transform: translateY(-25px);
+  }
+
   .hero h2 {
-    font-size: 26px;
+    font-size: 24px;
     line-height: 1.3;
   }
 
