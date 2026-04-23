@@ -1,30 +1,23 @@
-/* =========================
-   RESET
-   ========================= */
-
+/* RESET */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* =========================
-   BASE (HOME PAGE ONLY STYLE)
-   ========================= */
-
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Arial;
   background: #f5f6f8;
   color: #1a1a1a;
 }
 
-/* NAVBAR */
+/* NAV */
 header {
   position: fixed;
   top: 0;
   width: 100%;
   height: 70px;
-  background: #000;
+  background: black;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -37,7 +30,6 @@ header h1 {
   font-size: 16px;
 }
 
-/* NAV LINKS (DESKTOP DEFAULT) */
 nav {
   display: flex;
   gap: 10px;
@@ -46,41 +38,27 @@ nav {
 nav a {
   color: #ccc;
   text-decoration: none;
-  padding: 10px 14px;
-  border-radius: 6px;
-}
-
-nav a:hover {
-  background: #2b2b2b;
-  color: #fff;
+  padding: 10px;
 }
 
 nav a.active {
-  background: #fff;
-  color: #000;
+  background: white;
+  color: black;
 }
 
-/* HAMBURGER (HIDDEN ON DESKTOP) */
-.hamburger {
-  display: none;
-  font-size: 28px;
-  color: white;
-  cursor: pointer;
-}
-
-/* PAGE OFFSET */
+/* PAGE */
 .page {
   padding-top: 70px;
 }
 
-/* HERO (HOME ONLY) */
+/* HERO */
 .hero {
   min-height: calc(100vh - 70px);
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-  background: url("IMG_4898.JPG") center/cover no-repeat;
+  background: url("IMG_4898.JPG") center/cover;
   position: relative;
 }
 
@@ -88,7 +66,7 @@ nav a.active {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,0.45);
+  background: rgba(0,0,0,0.4);
 }
 
 .hero > div {
@@ -96,23 +74,16 @@ nav a.active {
   color: white;
 }
 
-/* BUTTON (FIXED HOME BUTTON) */
-.btn {
-  padding: 12px 22px;
-  border-radius: 6px;
-  text-decoration: none;
-  display: inline-block;
+/* CARDS */
+.card {
+  background: rgba(255,255,255,0.05);
+  padding: 25px;
+  margin: 20px auto;
+  max-width: 900px;
+  border-radius: 12px;
 }
 
-.btn.primary {
-  background: #fff;
-  color: #000;
-}
-
-/* =========================
-   GALLERY (BASE)
-   ========================= */
-
+/* GALLERY */
 .gallery {
   column-count: 3;
   max-width: 1100px;
@@ -125,10 +96,7 @@ nav a.active {
   border-radius: 10px;
 }
 
-/* =========================
-   TESTIMONIALS (BASE)
-   ========================= */
-
+/* REVIEWS */
 .reviews {
   display: grid;
   grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
@@ -144,10 +112,22 @@ nav a.active {
   border-radius: 10px;
 }
 
-/* =========================
-   FOOTER
-   ========================= */
+/* BOOKING */
+.booking-box {
+  max-width: 1000px;
+  height: 700px;
+  margin: auto;
+  border-radius: 12px;
+  overflow: hidden;
+}
 
+.booking-box iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* FOOTER */
 footer {
   text-align: center;
   padding: 30px;
@@ -155,68 +135,23 @@ footer {
   color: white;
 }
 
-/* =========================
-   MOBILE NAV (FIXED)
-   ========================= */
-
-@media (max-width: 768px) {
-
-  .hamburger {
-    display: block;
-  }
-
-  nav {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 70px;
-    left: 0;
-    width: 100%;
-    background: rgba(0,0,0,0.95);
-  }
-
-  nav.show {
-    display: flex;
-  }
-
-  nav a {
-    padding: 18px;
-    text-align: center;
-  }
-}
-
-/* =========================
-   DARK MODE (ONLY NON-HOME)
-   ========================= */
-
+/* 🔥 FIXED DARK MODE (THIS IS THE IMPORTANT PART) */
 body.dark-page {
-  background: radial-gradient(circle at top, #141420, #07070b) !important;
+  background: #0b0c10 !important;
   color: #eaeaea;
 }
 
-/* glass cards */
-body.dark-page .card,
-body.dark-page section {
+body.dark-page .card {
   background: rgba(255,255,255,0.04);
   border: 1px solid rgba(255,255,255,0.08);
-  border-radius: 12px;
-  padding: 25px;
-  margin: 20px auto;
   backdrop-filter: blur(10px);
 }
 
-/* text */
 body.dark-page p {
-  color: rgba(255,255,255,0.75);
+  color: #ccc;
 }
 
-/* glow background */
-body.dark-page::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  background:
-    radial-gradient(circle at 20% 10%, rgba(255,255,255,0.05), transparent 40%),
-    radial-gradient(circle at 80% 30%, rgba(120,120,255,0.05), transparent 45%);
-  pointer-events: none;
+/* MOBILE */
+@media(max-width:768px){
+  nav { display:none; }
 }
